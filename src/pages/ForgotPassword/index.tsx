@@ -114,9 +114,9 @@ const ForgotPasswordForm: React.FC <ForgotPasswordProps> = ({ onClose })=> {
         sx={{
           width: '100%',
           padding: 3,
-          backgroundColor: 'white',
-          borderRadius: 2,
-          boxShadow: 3,
+          // backgroundColor: 'white',
+          // borderRadius: 2,
+          // boxShadow: 3,
         }}
       >
         <img
