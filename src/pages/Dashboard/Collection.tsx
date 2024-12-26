@@ -24,7 +24,7 @@ const products: Product[] = [
     id: 1,
     image: product1,
     hoverImage: product2,
-    title: "Jhute Bag with Logo",
+    title: "Jute Bag with Logo",
     prevPrice: 80,
     newPrice: 40,
     discount: "10% Off",

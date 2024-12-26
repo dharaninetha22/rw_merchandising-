@@ -49,7 +49,7 @@ const IconWrapper = styled(Box)({
 });
 
 const HeroMarquee = () => {
-  const items = ['Jhute Bag ', 'Caps', 'Safety Helmet', '2 in 1 Combo kit', 'Bags', 'ID Cards','kits', 'Shirts', 'tape'];
+  const items = ['Jute Bag ', 'Caps', 'Safety Helmet', '2 in 1 Combo kit', 'Bags', 'ID Cards','kits', 'Shirts', 'tape'];
 
   return (
     <MarqueeContainer>

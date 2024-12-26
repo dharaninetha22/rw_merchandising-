@@ -57,7 +57,7 @@ const Header: React.FC = () => {
     { label: "4 in 1 kits", img: headercat2, path: "/denim-jeans" },
     { label: "2 in 1 kits", img: headercat3, path: "/casual-suit" },
     { label: "Bags", img: headercat4, path: "/summer-dress" },
-    { label: "Jhute Bags", img: headercat5, path: "/sweaters" },
+    { label: "Jute Bags", img: headercat5, path: "/sweaters" },
     { label: "Safety Helmet", img: headercat6, path: "/jackets" },
     { label: "Tape", img: headercat7, path: "/jackets" },
   ];
