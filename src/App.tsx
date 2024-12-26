@@ -1,26 +1,65 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import { Box, ThemeProvider } from '@mui/material';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { RouterProvider } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
+import { theme } from './Theme/theme';
+import router from './Routes/routes';
+import Preloader from './components/Preloader';
+import CursorBall from './CursorBall';
 
-function App() {
+import { CartProvider } from './pages/Addcart/CartContext';
+
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+});
+
+const App: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <QueryClientProvider client={queryClient}>
+        <CartProvider>
+          <Box className="App">
+            {isLoading ? (
+              <Preloader />
+            ) : (
+              <>
+                {/* Router renders the Collection component based on routes */}
+                <RouterProvider router={router} />
+                <CursorBall />
+                <ToastContainer
+                  position="top-right"
+                  autoClose={5000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                />
+              </>
+            )}
+          </Box>
+          
+        </CartProvider>
+      </QueryClientProvider>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

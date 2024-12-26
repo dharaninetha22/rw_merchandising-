@@ -3,18 +3,42 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@mui/icons-material": "^6.1.8",
+    "@mui/material": "^6.1.9",
+    "@mui/x-date-pickers": "^7.22.3",
+    "@tanstack/react-query": "^5.62.7",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^27.0.1",
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/yup": "^0.32.0",
+    "axios": "^1.7.8",
+    "dayjs": "^1.11.13",
+    "gsap": "^3.12.5",
+    "js-cookie": "^3.0.5",
     "react": "^18.3.1",
+    "react-countdown": "^2.3.6",
     "react-dom": "^18.3.1",
+    "react-fast-marquee": "^1.6.5",
+    "react-icons": "^5.4.0",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^7.0.1",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.30.2",
+    "react-toastify": "^10.0.6",
+    "slick-carousel": "^1.8.1",
+    "swiper": "9",
     "typescript": "^4.4.2",
-    "web-vitals": "^2.1.0"
+    "vanilla-tilt": "^1.8.1",
+    "web-vitals": "^2.1.0",
+    "yup": "^1.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,5 +63,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-slick": "^0.23.13"
   }
 }
